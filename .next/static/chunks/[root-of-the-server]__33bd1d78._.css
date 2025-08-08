@@ -799,14 +799,6 @@
     height: calc(var(--spacing) * 32);
   }
 
-  .h-35 {
-    height: calc(var(--spacing) * 35);
-  }
-
-  .h-40 {
-    height: calc(var(--spacing) * 40);
-  }
-
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
