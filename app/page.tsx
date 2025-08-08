@@ -164,7 +164,7 @@ const PortfolioPage = () => {
                 </div>
               </div>
               
-              <nav className="mt-16 hidden lg:block">
+              <nav className="mt-9 hidden lg:block">
                 <ul className="space-y-4">
                   <li>
                     <a href="#about" className="flex items-center group">
@@ -199,7 +199,7 @@ const PortfolioPage = () => {
                 </ul>
               </nav>
             </div>
-            
+            <div><br></br></div>
             <div>
               <a
                 href="/0808Resume.pdf"
