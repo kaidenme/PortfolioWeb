@@ -86,7 +86,7 @@ const PortfolioPage = () => {
     {
       position: "Crew Member",
       company: "McDonalds",
-      period: "JULY 2020 — PRESENT",
+      period: "AUG 2021 — PRESENT",
       description: [
         "Partnered with team members to deliver efficient and high-quality food service, ensuring timely order delivery and customer satisfaction.",
         "Coordinated with colleagues to prepare food items and manage ingredient inventory, maintaining optimal stock levels for smooth operations.",
@@ -96,10 +96,40 @@ const PortfolioPage = () => {
     }
   ];
 
-  const skills = [
-    "C#", "Javascript", "AWS", ".Net", "React", "Docker", 
-    "SQL", "Node.js", "Git", "ASP.Net", "Vite", "VS Code"
-  ];
+  const skillCategories = [
+  {
+    title: "Frontend",
+    skills: ["Javascript", "React", "Vite", "HTML", "CSS", "Tailwindcss"],
+    icon: "🖥️",
+    color: "bg-blue-500/10",
+    borderColor: "border-blue-500/30",
+    textColor: "text-blue-300"
+  },
+  {
+    title: "Backend",
+    skills: ["C#", ".Net", "ASP.Net", "MVP Core", "Node.js","PostgreSQL", "SQL", "Python"],
+    icon: "⚙️",
+    color: "bg-purple-500/10",
+    borderColor: "border-purple-500/30",
+    textColor: "text-purple-300"
+  },
+  {
+    title: "Cloud & Architecture",
+    skills: ["AWS", "Docker", "System Design", "CI/CD"],
+    icon: "☁️",
+    color: "bg-teal-500/10",
+    borderColor: "border-teal-500/30",
+    textColor: "text-teal-300"
+  },
+  {
+    title: "Tools",
+    skills: ["Git", "VS Code", "JIRA", "Confluence"],
+    icon: "🛠️",
+    color: "bg-amber-500/10",
+    borderColor: "border-amber-500/30",
+    textColor: "text-amber-300"
+  }
+];
 
   return (
     <div className="bg-slate-900 text-slate-400 antialiased">
@@ -185,6 +215,12 @@ const PortfolioPage = () => {
                     </a>
                   </li>
                   <li>
+                    <a href="#skills" className="flex items-center group">
+                      <span className="w-8 h-px bg-slate-600 mr-4 transition-all group-hover:w-16 group-hover:bg-slate-200"></span>
+                      <span className="text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200">Skills</span>
+                    </a>
+                  </li>
+                  <li>
                     <a href="#education" className="flex items-center group">
                       <span className="w-8 h-px bg-slate-600 mr-4 transition-all group-hover:w-16 group-hover:bg-slate-200"></span>
                       <span className="text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200">Education</span>
@@ -200,17 +236,7 @@ const PortfolioPage = () => {
               </nav>
             </div>
             <div><br></br></div>
-            <div>
-              <a
-                href="/0808Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-4 w-fit py-3 bg-slate-800 text-teal-400 font-medium rounded-lg
-                           border border-slate-700 hover:bg-slate-700 transition-colors duration-200"
-              >
-                View Resume
-              </a>
-            </div>
+            
           </div>
         </div>
         
@@ -226,23 +252,24 @@ const PortfolioPage = () => {
               systems, I love transforming ideas into high-performance solutions, from developing APIs and 
               optimising cloud infrastructure to building intuitive interfaces.
             </p>
-            <div className="mt-6">
-              <h3 className="text-lg font-medium text-slate-200 mb-2">Skills</h3>
-              <ul className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                {skills.map((skill, index) => (
-                  <li key={index} className="flex items-center">
-                    <span className="w-2 h-2 bg-slate-500 rounded-full mr-2"></span>
-                    {skill}
-                  </li>
-                ))}
-              </ul>
+            <div>
+              <a
+                href="/0808Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-4 w-fit py-3 bg-slate-800 text-teal-400 font-medium rounded-lg
+                           border border-slate-700 hover:bg-slate-700 transition-colors duration-200"
+              >
+                View Resume
+              </a>
             </div>
+            
           </section>
           
           {/* Experience section */}
 <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Work experience">
-  <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-    <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Experience</h2>
+  <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12  lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0">
+    <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 ">Experience</h2>
   </div>
   
   <ol className="group/list">
@@ -355,8 +382,8 @@ const PortfolioPage = () => {
 
           {/* Projects section */}
           <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Selected projects">
-            <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Projects</h2>
+            <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12  lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 ">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 ">Projects</h2>
             </div>
             <div>
               <ul className="space-y-12">
@@ -399,10 +426,56 @@ const PortfolioPage = () => {
             </div>
           </section>
 
+          
+
+<section id="skills" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Skills">
+  <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 ">
+    <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 ">Skills</h2>
+  </div>
+  
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {skillCategories.map((category, index) => (
+      <div 
+        key={index}
+        className={`group relative p-6 rounded-xl border ${category.borderColor} ${category.color} transition-all duration-300 hover:scale-[1.02] hover:shadow-xl`}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent to-slate-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+        
+        <div className="relative z-10">
+          <div className="flex items-center mb-4">
+            <span className="text-2xl mr-3">{category.icon}</span>
+            <h3 className={`text-lg font-semibold ${category.textColor}`}>
+              {category.title}
+            </h3>
+          </div>
+          
+          <div className="flex flex-wrap gap-2">
+            {category.skills.map((skill, skillIndex) => (
+              <span
+                key={skillIndex}
+                className="px-3 py-1 text-sm rounded-full bg-slate-800/50 text-slate-300 border border-slate-700 hover:border-slate-500 transition-colors duration-200"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+        
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden rounded-xl">
+          <div className="absolute -inset-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 animate-shine"></div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
           {/* Education section */}
           <section id="education" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Education">
-            <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Education</h2>
+            <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12  lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 ">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 ">Education</h2>
             </div>
             <div>
               <ol className="group/list">
@@ -445,8 +518,8 @@ const PortfolioPage = () => {
 
           {/* Certifications section */}
           <section id="certifications" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Certifications">
-            <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Certifications</h2>
+            <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 ">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 ">Certifications</h2>
             </div>
             <div>
               <ol className="group/list">
