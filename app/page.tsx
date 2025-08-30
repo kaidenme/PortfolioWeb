@@ -246,11 +246,7 @@ const PortfolioPage = () => {
           <section id="about" className="mb-16 pt-24">
             <h2 className="text-2xl font-bold text-slate-200 mb-4">About</h2>
             <p className="mb-4">
-              Hi there! I'm a software engineer who builds scalable, cloud-powered web applications. 
-              I specialize in .NET, C#, JavaScript, React, and AWS to create clean, efficient solutions 
-              that solve real-world problems. Whether working on personal passion projects or professional 
-              systems, I love transforming ideas into high-performance solutions, from developing APIs and 
-              optimising cloud infrastructure to building intuitive interfaces.
+              I’m a full-stack developer with nearly 2 years of experience building scalable, cloud-powered web applications. I specialize in the Microsoft stack for backend development and modern JavaScript frameworks on the frontend, with AWS powering cloud infrastructure. I work across the full development cycle—from designing APIs and optimizing deployments to creating responsive, user-friendly interfaces.
             </p>
             <div>
               <a
