@@ -23,10 +23,19 @@ const PortfolioPage = () => {
   const projects = [
     {
       title: "FizzBuzz Web App",
-      description: ["Developed a FizzBuzz web app with custom and default game modes.", "Built backend using .NET; frontend with Vite-powered JavaScript. Supported local development and Docker deployment.", "Wrote unit tests for both frontend and backend."],
-      technologies: ["C#", ".NET", "JavaScript", "Vite", "Docker", "xUnit", "Jest"],
+      description: ["Developed a FizzBuzz web app featuring both default and customizable game modes, with comprehensive unit tests for frontend and backend.", "Built backend using .NET; frontend with Vite-powered JavaScript. Supported local development and Docker deployment.", "Designed a robust AWS architecture emphasizing high availability, security, and scalability to meet stakeholder requirements and support future expansion."],
+      technologies: ["C#", ".NET", "JavaScript", "Vite", "Docker", "xUnit", "Jest", "AWS"],
       link: "https://github.com/kaidenme/FizzBuzz-Game",
-      image: "/img/projects/fb.png"
+      image: "/img/projects/fb.png",
+      image1: "/img/projects/fbaws.png"
+    },
+    {
+      title: "Library Management System",
+      description: ["A library management system allows users to search for books, and CDs."," Created user-friendly web interface allowing users to register an account, borrow books, and return them.", "Architected a highly available and scalable cloud infrastructure capable of handling high traffic and supporting future growth."],
+      technologies: ["C#", "AWS", "SQL", "Javascript", "HTML", "Docker"],
+      link: "https://github.com/kaidenme/Library-System",
+      image: "/img/projects/lm.png",
+      image1: "/img/projects/libaws.png"
     },
     {
       title: "Diabetes Prediction Web",
@@ -34,14 +43,8 @@ const PortfolioPage = () => {
       technologies: ["Python", "Flask", "Scikit-learn", "Pandas", "Data Science", "AI"],
       link: "https://github.com/kaidenme/Diabetes-Prediction",
       image: "/img/projects/db.png"
-    },
-    {
-      title: "Library Management System",
-      description: ["A library management system allows users to search for books, and CDs."," Created user-friendly web interface allowing users to register an account, borrow books, and return them.", "Designed a scalable cloud architecture to support future expansion and high traffic, focusing on scalability and high availability."],
-      technologies: ["C#", "AWS", "SQL", "Javascript", "HTML", "Docker"],
-      link: "https://github.com/kaidenme/Library-System",
-      image: "/img/projects/lm.png"
     }
+    
   ];
 
   const education = [
@@ -56,19 +59,21 @@ const PortfolioPage = () => {
 
   const certifications = [
     {
+      name: "AWS Certified Solutions Architect - Associate",
+      issuer: "Amazon Web Services",
+      year: "SEP 2025",
+      description: "Constantly expanding knowledge on design and deploy scalable, highly available, and fault-tolerant systems on AWS.",
+      certificateImage: "/img/certifications/saa.png"
+    },
+    {
+      
       name: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services",
       year: "JULY 2025",
       description: "Demonstrate knowledge in cloud architectures, cloud services, deloyment and management of cloud-integrated applications.",
       certificateImage: "/img/certifications/clf.png"
     },
-    {
-      name: "AWS Certified Solutions Architect - Associate",
-      issuer: "Amazon Web Services",
-      year: "IN PROGRESS",
-      description: "Constantly expanding knowledge on design and deploy scalable, highly available, and fault-tolerant systems on AWS.",
-      certificateImage: "/img/certifications/saa.png"
-    }
+    
   ];
 
   const experience = [
@@ -173,7 +178,10 @@ const PortfolioPage = () => {
               </h1>
               <h2 className="mt-3 text-lg font-medium text-slate-200">Software Engineer</h2>
               <p className="mt-4 max-w-xs leading-normal">
-                Hi, welcome to my page.
+                From concept to cloud constellation.
+              </p>
+              <p className="mt-4 max-w-xs italic text-blue-400">
+                I don't just build applications — I engineer <span className="text-blue-400">scalable digital dreams.</span>
               </p>
               
               <div className="mt-6">
@@ -246,11 +254,14 @@ const PortfolioPage = () => {
           <section id="about" className="mb-16 pt-24">
             <h2 className="text-2xl font-bold text-slate-200 mb-4">About</h2>
             <p className="mb-4">
-              Hi there! I’m a full-stack developer with nearly 2 years of experience building scalable, cloud-powered web applications. I specialise in .Net stack for backend development and modern JavaScript frameworks on the frontend, with AWS powering cloud infrastructure. I work across the full development cycle, from designing APIs and optimising deployments to creating responsive, user-friendly interfaces.
+              Hi there! I’m a full-stack software engineer with nearly 2 years of experience building scalable, cloud-powered web applications. I specialise in .Net stack for backend development and modern JavaScript frameworks on the frontend, with AWS powering cloud infrastructure. I work across the full development cycle, from designing APIs and optimising deployments to creating responsive, user-friendly interfaces.
+            </p>
+            <p className="mb-4">
+              In addition to development, I’m passionate about helping businesses as a consultant—collaborating with clients to understand their needs, provide technical guidance, and deliver tailored solutions that align with their goals. This experience has strengthened my ability to communicate complex technical concepts clearly and ensure projects deliver real, measurable value.
             </p>
             <div>
               <a
-                href="/0808Resume.pdf"
+                href="/2309Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-4 w-fit py-3 bg-slate-800 text-teal-400 font-medium rounded-lg
@@ -392,15 +403,31 @@ const PortfolioPage = () => {
                         </a>
                       </h3>
                       <div className="aspect-video relative w-full h-48 mb-4 rounded overflow-hidden border-0 border-slate-200/10 group-hover:border-slate-200/30">
-                        {project.image && (
-                          <Image
-                            src={project.image}
-                            alt={project.title}
-                            fill
-                            className="object-contain w-full h-full"
-                          />
-                        )}
-                      </div>
+  <div className="flex flex-col md:flex-row w-full h-full">
+    {project.image && (
+      <div className="flex-1 relative min-h-[50%] md:min-h-0">
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-cover object-contain"
+        />
+      </div>
+    )}
+    
+    {project.image1 && (
+      <div className="flex-1 relative min-h-[50%] md:min-h-0 border-t md:border-t-0 md:border-l border-slate-200/20 bg-white">
+        <Image
+          src={project.image1}
+          alt={`${project.title} - additional view`}
+          fill
+          className="w-full h-auto object-contain max-h-96 object-contain"
+          
+        />
+      </div>
+    )}
+  </div>
+</div>
                       <ul className="text-sm leading-normal mb-4 list-disc list-inside">
   {project.description.map((point, index) => (
     <li key={index}>{point}</li>
