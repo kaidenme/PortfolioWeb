@@ -254,7 +254,7 @@ const PortfolioPage = () => {
           <section id="about" className="mb-16 pt-24">
             <h2 className="text-2xl font-bold text-slate-200 mb-4">About</h2>
             <p className="mb-4">
-              Hi there! I’m a full-stack software engineer with nearly 2 years of experience building scalable, cloud-powered web applications. I specialise in .Net stack for backend development and modern JavaScript frameworks on the frontend, with AWS powering cloud infrastructure. I work across the full development cycle, from designing APIs and optimising deployments to creating responsive, user-friendly interfaces.
+              Hi there! I’m a full-stack software engineer with 2 years of experience building scalable, cloud-powered web applications. I specialise in .Net stack for backend development and modern JavaScript frameworks on the frontend, with AWS powering cloud infrastructure. I work across the full development cycle, from designing APIs and optimising deployments to creating responsive, user-friendly interfaces.
             </p>
             <p className="mb-4">
               In addition to development, I’m passionate about helping businesses as a consultant—collaborating with clients to understand their needs, provide technical guidance, and deliver tailored solutions that align with their goals. This experience has strengthened my ability to communicate complex technical concepts clearly and ensure projects deliver real, measurable value.
