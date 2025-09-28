@@ -261,7 +261,7 @@ const PortfolioPage = () => {
             </p>
             <div>
               <a
-                href="/2309Resume.pdf"
+                href="/2809Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-4 w-fit py-3 bg-slate-800 text-teal-400 font-medium rounded-lg
